@@ -120,7 +120,7 @@ if scdoc.found()
 			'swaynag.5.scd'
 		]
 	}
-	locales = ['en']
+	locales = ['en', 'ja']
 
 	foreach proj, sources: man_files
 		foreach locale: locales
