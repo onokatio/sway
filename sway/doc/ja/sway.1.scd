@@ -1,50 +1,50 @@
 sway(1)
 
-# NAME
+# 名前
 
-sway - An i3-compatible Wayland compositor
+sway - i3 互換のある Wayland コンポジッター
 
-# SYNOPSIS
+# 書式
 
 *sway* [options...] [command]
 
-# OPTIONS
+# オプション
 
 *-h, --help*
-	Show help message and quit.
+	help を表示し終了する.
 
 *-c, --config* <config>
-	Specifies a config file.
+	設定ファイルを指定する.
 
 *-C, --validate*
-	Check the validity of the config file, then exit.
+	設定ファイルの文法を確認し終了する.
 
 *-d, --debug*
-	Enables full logging, including debug information.
+	デバッグ情報を含めた完全なログを出力する.
 
 *-v, --version*
-	Show the version number and quit.
+	バージョンを表示して終了する.
 
 *-V, --verbose*
-	Enables more verbose logging.
+	より冗長にログを出力する.
 
 *--get-socketpath*
-	Gets the IPC socket path and prints it, then exits.
+	IPC ソケットのパスを表示し終了する.
 
-# DESCRIPTION
+# 説明
 
-sway was created to fill the need of an i3-like window manager for Wayland. The
-upstream i3 developers have no intention of porting i3 to Wayland, and projects
-proposed by others ended up as vaporware. Many thanks to the i3 folks for
-providing such a great piece of software, so good that your users would rather
-write an entirely new window manager from scratch that behaved _exactly_ like i3
-rather than switch to something else.
+Swayは、Waylandで i3 のようなウィンドウマネージャが欲しいいという需要に答えるために作られまし
+た。 上流の i3 開発者達は i3 を Wayland へ 移植する意向がなく、 他の者たちによって提案されて
+も実現されずに終わっていました。 素晴らしい機能を提供する沢山の i3 のフォークがおかげでユーザー
+は他のウィンドウマネージャを使おうとするよりかは、 むしろ i3 のように振る舞う新しいウィンドウマ
+ネージャを書こうとしました。
 
-You can run sway directly from a tty, or via a Wayland-compatible login manager.
+sway は、 tty か Wayland に互換性のあるログインマネージャから起動できます。
 
-# CONFIGURATION
+# 設定
 
 sway searches for a config file in the following locations, in this order:
+sway は、以下の順番で設定ファイルの場所を探索します。
 
 . ~/.sway/config
 . $XDG_CONFIG_HOME/sway/config (suggested location)
@@ -53,15 +53,14 @@ sway searches for a config file in the following locations, in this order:
 . /etc/sway/config
 . /etc/i3/config
 
-If unset, $XDG_CONFIG_HOME defaults to *~/.config*.
+設定されていない場合 $XDG_CONFIG_HOME はデフォルトで *~/.config* となります。
 
-An error is raised when no config file is found. The recommended default
-configuration is usually installed to */etc/sway/config*; you are encouraged to
-copy this to *~/.config/sway/config* and edit it from there.
+設定ファイルが存在しない場合エラーが発生します。 推奨されるデフォルトの設定は
+*/etc/sway/config*です。 *~/.config/sway/config* へコピーして編集してください。
 
-For information on the config file format, see *sway*(5).
+設定ファイルに関するより詳しい説明は *sway*(5) を見てください。
 
-# IPC COMMANDS
+# IPC コマンド
 
 Though *swaymsg*(1) is generally preferred, you may run *sway* _command_ to
 send _command_ to the running instance of sway. You can also issue commands
