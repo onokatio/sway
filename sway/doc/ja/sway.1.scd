@@ -47,7 +47,7 @@ sway searches for a config file in the following locations, in this order:
 sway は、以下の順番で設定ファイルの場所を探索します。
 
 . ~/.sway/config
-. $XDG_CONFIG_HOME/sway/config (suggested location)
+. $XDG_CONFIG_HOME/sway/config (推奨)
 . ~/.i3/config
 . $XDG_CONFIG_HOME/i3/config
 . /etc/sway/config
@@ -58,16 +58,12 @@ sway は、以下の順番で設定ファイルの場所を探索します。
 設定ファイルが存在しない場合エラーが発生します。 推奨されるデフォルトの設定は
 */etc/sway/config*です。 *~/.config/sway/config* へコピーして編集してください。
 
-設定ファイルに関するより詳しい説明は *sway*(5) を見てください。
+設定ファイルに関するより詳しい説明は *sway*(5) を確認してください。
 
 # IPC コマンド
 
-Though *swaymsg*(1) is generally preferred, you may run *sway* _command_ to
-send _command_ to the running instance of sway. You can also issue commands
-with *i3-msg*(1) or even with *i3*(1).
-
 主に *swaymsg*(1) を通して、 *sway* _コマンド_ の _コマンド_ を起動している sway の
-インスタンスへ送ることができます。 また *i3-msg*(1) や *i3*(1) でもコマンドが使えます。
+インスタンスへ送ることができます。 また *i3-msg*(1) や *i3*(1) でも可能です。
 
 # 環境変数
 
@@ -78,38 +74,38 @@ _SWAYSOCK_
 
 _XKB\_DEFAULT\_RULES_, _XKB\_DEFAULT\_MODEL_, _XKB\_DEFAULT\_LAYOUT_,
 _XKB\_DEFAULT\_VARIANT_, _XKB\_DEFAULT\_OPTIONS_
-	Configures the xkb keyboard settings. See *xkeyboard-config*(7). The
-	preferred way to configure the keyboard is via the configuration file, see
-	*sway-input*(5).
+	xkb キーボード設定を指定します。 *xkeyboard-config*(7) を確認してください。
+	好まれるキーボード設定方法は設定ファイルによる設定です。 *sway-input*(5) を
+	確認してください。
 
-The following environment variables are set by sway:
+以下の環境変数は sway によって設定されるものです。
 
 _DISPLAY_
-	If compiled with Xwayland support and Xwayland is not disabled by the
-	config, this will be set to the name of the X display used for Xwayland.
+	Xwayland サポートを有効にして sway をコンパイルした場合、設定で無効にしない限り
+	Xwaylandを使用するための X ディスプレイの名前がセットされます。
 
 _I3SOCK_
-	For compatibility with i3, specifies the path to the sway IPC socket.
+	i3 との互換性を保つため、 sway IPC ソケットのパスがセットされます。
 
 _SWAYSOCK_
-	Specifies the path to the sway IPC socket.
+	sway IPC ソケットのパスが指定されます。
 
 _WAYLAND_DISPLAY_
-	Specifies the name of the Wayland display that sway is running on.
+	sway が動作している Wayland ディスプレイの名前がセットされます。
 
 _XCURSOR_SIZE_
-	Specifies the configured cursor size.
+	カーソルのサイズを指定します。
 
 _XCURSOR_THEME_
-	Specifies the configured cursor theme.
+	カーソルのテーマを指定します。
 
-# AUTHORS
+# 著者
 
 Maintained by Drew DeVault <sir@cmpwn.com>, who is assisted by other open
 source contributors. For more information about sway development, see
 <https://github.com/swaywm/sway>.
 
-# SEE ALSO
+# 関連項目
 
 *sway*(5) *swaymsg*(1) *sway-input*(5) *sway-output*(5) *sway-bar*(5)
 *sway-ipc*(7)
