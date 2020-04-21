@@ -1,28 +1,25 @@
 sway-output(5)
 
-# NAME
+# 名前
 
-sway-output - output configuration commands for sway
+sway-output - sway の出力設定コマンド
 
-# DESCRIPTION
+# 説明
 
-You may combine output commands into one, like so:
+以下のようにコマンドを一つの行へまとめることができます。
 
 	output HDMI-A-1 mode 1920x1080 pos 1920 0 bg ~/wallpaper.png stretch
 
-You can get a list of output names with *swaymsg -t get_outputs*. You may also
-match any output by using the output name "\*". Additionally, "-" can be used
-to match the focused output by name and "--" can be used to match the focused
-output by its identifier.
+アウトプット名は *swaymsg -t get_outputs* で取得できます。すべてのアウトプットに該当させ
+るために "\*" も使用可能です。 また、 "-" で名前指定、 "--"で識別子指定が可能です。
 
-Some outputs may have different names when disconnecting and reconnecting. To
-identify these, the name can be substituted for a string consisting of the make,
-model and serial which you can get from *swaymsg -t get_outputs*. Each value
-must be separated by one space. For example:
+いくつかのアウトプットは、再接続すると名前が変わります。これらを判別するには、名前の代わりに
+*swaymsg -t get_outputs* で取得できるモデル番号とシリアル番号を名前として代用できます。
+それぞれの値は空白区切りです。例えば以下のようになります。
 
 	output "Some Company ABC123 0x00000000" pos 1920 0
 
-# COMMANDS
+# コマンド
 
 *output* <name> mode|resolution|res [--custom] <WIDTHxHEIGHT>[@<RATE>Hz]
 	Configures the specified output to use the given mode. Modes are a
