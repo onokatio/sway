@@ -66,12 +66,15 @@ Though *swaymsg*(1) is generally preferred, you may run *sway* _command_ to
 send _command_ to the running instance of sway. You can also issue commands
 with *i3-msg*(1) or even with *i3*(1).
 
-# ENVIRONMENT
+主に *swaymsg*(1) を通して、 *sway* _コマンド_ の _コマンド_ を起動している sway の
+インスタンスへ送ることができます。 また *i3-msg*(1) や *i3*(1) でもコマンドが使えます。
 
-The following environment variables have an effect on sway:
+# 環境変数
+
+以下の環境変数が sway に影響します。
 
 _SWAYSOCK_
-	Specifies the path to the sway IPC socket.
+	sway IPC ソケットのパスを指定します。
 
 _XKB\_DEFAULT\_RULES_, _XKB\_DEFAULT\_MODEL_, _XKB\_DEFAULT\_LAYOUT_,
 _XKB\_DEFAULT\_VARIANT_, _XKB\_DEFAULT\_OPTIONS_
