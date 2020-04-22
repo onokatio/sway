@@ -6,16 +6,16 @@ sway-output - sway の出力設定コマンド
 
 # 説明
 
-以下のようにコマンドを一つの行へまとめることができます。
+以下のようにコマンドを一つの行へまとめることができる。
 
 	output HDMI-A-1 mode 1920x1080 pos 1920 0 bg ~/wallpaper.png stretch
 
-アウトプット名は *swaymsg -t get_outputs* で取得できます。すべてのアウトプットに該当させ
-るために "\*" も使用可能です。 また、 "-" で名前指定、 "--"で識別子指定が可能です。
+アウトプット名は *swaymsg -t get_outputs* で取得できる。すべてのアウトプットに該当させ
+るために "\*" も使用可能。 また、 "-" で名前指定、 "--"で識別子指定が可能。
 
-いくつかのアウトプットは、再接続すると名前が変わります。これらを判別するには、名前の代わりに
-*swaymsg -t get_outputs* で取得できるモデル番号とシリアル番号を名前として代用できます。
-それぞれの値は空白区切りです。例えば以下のようになります。
+いくつかのアウトプットは、再接続すると名前が変わる。これらを判別するには、名前の代わりに
+*swaymsg -t get_outputs* で取得できるモデル番号とシリアル番号を名前として代用できる。
+それぞれの値は空白区切り。例えば以下のようになる。
 
 	output "Some Company ABC123 0x00000000" pos 1920 0
 
@@ -26,6 +26,7 @@ sway-output - sway の出力設定コマンド
 	combination of width and height (in pixels) and a refresh rate that your
 	display can be configured to use. For a list of available modes for each
 	output, use *swaymsg -t get_outputs*.
+	アウトプットに特定のモードを使う様に設定する。
 
 	To set a custom mode not listed in the list of available modes, use
 	*--custom*. You should probably only use this if you know what you're
